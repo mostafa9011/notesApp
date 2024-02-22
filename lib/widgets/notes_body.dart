@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:notes_app/widgets/custom_app_bar.dart';
+import 'package:notes_app/widgets/custom_notes_item.dart';
 
 class NotesBody extends StatelessWidget {
   const NotesBody({super.key});
@@ -13,11 +14,10 @@ class NotesBody extends StatelessWidget {
         vertical: mediaQuery.padding.top,
         horizontal: mediaQuery.size.width * 0.05,
       ),
-      child: Column(
+      child: const Column(
         children: [
-          CustomAppBar(
-            mediaQuery: mediaQuery,
-          ),
+          CustomAppBar(),
+          CustomNoteItem(),
         ],
       ),
     );
