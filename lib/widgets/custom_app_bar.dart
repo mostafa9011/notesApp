@@ -3,19 +3,23 @@ import 'package:flutter/material.dart';
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({
     super.key,
+    required this.title,
+    required this.icon,
   });
+  final String title;
+  final IconData icon;
 
   @override
   Widget build(BuildContext context) {
     MediaQueryData mediaQuery = MediaQuery.of(context);
     return Container(
-      margin: const EdgeInsets.only(top: 50,bottom: 24),
+      margin: const EdgeInsets.only(top: 50, bottom: 24),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          const Text(
-            'Notes',
-            style: TextStyle(
+          Text(
+            title,
+            style: const TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 20,
               color: Colors.white,
@@ -32,9 +36,7 @@ class CustomAppBar extends StatelessWidget {
               ),
             ),
             onPressed: () {},
-            child: const Icon(
-              Icons.search,
-            ),
+            child: Icon(icon),
           ),
         ],
       ),
