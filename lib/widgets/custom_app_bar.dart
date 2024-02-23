@@ -9,7 +9,7 @@ class CustomAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     MediaQueryData mediaQuery = MediaQuery.of(context);
     return Container(
-      margin: const EdgeInsets.only(top: 50),
+      margin: const EdgeInsets.only(top: 50,bottom: 24),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
