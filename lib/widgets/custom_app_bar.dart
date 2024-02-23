@@ -8,8 +8,8 @@ class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     MediaQueryData mediaQuery = MediaQuery.of(context);
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 16),
+    return Container(
+      margin: const EdgeInsets.only(top: 50),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
