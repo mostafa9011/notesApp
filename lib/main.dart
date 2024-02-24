@@ -1,4 +1,3 @@
-import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/adapters.dart';
@@ -10,9 +9,9 @@ import 'package:notes_app/widgets/constant.dart';
 
 void main() async {
   Bloc.observer = MyBlocObserver();
-  await Hive.initFlutter();
-  await Hive.openBox(kNotesBox);
-  Hive.registerAdapter(NoteItemModelAdapter());
+  await Hive.initFlutter(); //(1)
+  Hive.registerAdapter(NoteItemModelAdapter()); //(2)
+  await Hive.openBox<NoteItemModel>(kNotesBox); //(3)
   runApp(const MyApp());
 }
 

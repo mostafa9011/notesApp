@@ -11,14 +11,13 @@ class FloatingButton extends StatelessWidget {
       backgroundColor: kPrimaryColor,
       onPressed: () {
         showModalBottomSheet(
+          isScrollControlled: true,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(15),
           ),
           context: context,
           builder: (context) {
-            return const ModalSheet(
-              hintText: 'Title',
-            );
+            return const ModalSheet();
           },
         );
       },

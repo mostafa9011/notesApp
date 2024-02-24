@@ -22,7 +22,10 @@ class BodyEditNoteView extends StatelessWidget {
           SizedBox(height: 15),
           CustomFormTextFeild(hintText: 'Content', maxLines: 5),
           SizedBox(height: 66),
-          CustomButton(text: 'Edit'),
+          CustomButton(
+            text: 'Edit',
+            isLoading: false,
+          ),
         ],
       ),
     );
