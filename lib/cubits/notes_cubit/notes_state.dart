@@ -1,4 +1,5 @@
+abstract class AllNoteStates {}
 
-abstract class NoteStates {}
+class AllNoteInitState extends AllNoteStates {}
 
-class NoteInitState extends NoteStates {}
+class SuccessAllNoteState extends AllNoteStates {}

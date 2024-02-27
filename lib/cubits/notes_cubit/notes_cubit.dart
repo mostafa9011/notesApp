@@ -4,15 +4,15 @@ import 'package:notes_app/cubits/notes_cubit/notes_state.dart';
 import 'package:notes_app/models/note_item_model.dart';
 import 'package:notes_app/widgets/constant.dart';
 
-class NotesCubit extends Cubit<NoteStates> {
-  NotesCubit(super.initialState);
+class AllNotesCubit extends Cubit<AllNoteStates> {
+  AllNotesCubit(super.initialState);
 
   List<NoteItemModel>? notes;
 
-  List<NoteItemModel> fichNotes() {
+  fichAllNotes() {
     var noteBox = Hive.box<NoteItemModel>(kNotesBox);
     notes = noteBox.values.toList();
-    emit(NoteInitState());
-    return notes!;
+    emit((SuccessAllNoteState()));
+    //return notes!;
   }
 }
