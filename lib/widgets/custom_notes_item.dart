@@ -13,11 +13,17 @@ class CustomNoteItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        padding: EdgeInsets.zero,
-      ),
-      onPressed: () {
+    return
+        // ElevatedButton(
+        //   style: ElevatedButton.styleFrom(
+        //     padding: EdgeInsets.zero,
+        //   ),
+        //   onPressed: () {
+        //     Navigator.pushNamed(context, EditNoteView.id, arguments: note);
+        //   },
+        // child:
+        GestureDetector(
+      onTap: () {
         Navigator.pushNamed(context, EditNoteView.id, arguments: note);
       },
       child: Container(
@@ -79,5 +85,6 @@ class CustomNoteItem extends StatelessWidget {
         ),
       ),
     );
+    //);
   }
 }

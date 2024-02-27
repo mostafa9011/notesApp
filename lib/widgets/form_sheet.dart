@@ -6,6 +6,7 @@ import 'package:notes_app/cubits/add_note_cubit/add_note_cubit.dart';
 import 'package:notes_app/cubits/add_note_cubit/add_note_states.dart';
 import 'package:notes_app/cubits/notes_cubit/notes_cubit.dart';
 import 'package:notes_app/models/note_item_model.dart';
+import 'package:notes_app/widgets/color_piker_list.dart';
 import 'package:notes_app/widgets/custom_button.dart';
 import 'package:notes_app/widgets/custom_text_feild.dart';
 
@@ -42,7 +43,12 @@ class _FormSheetState extends State<FormSheet> {
               subTitle = value;
             },
           ),
-          const SizedBox(height: 66),
+          const SizedBox(height: 50),
+          const SizedBox(
+            height: 35 * 2,
+            child: ColorPikerList(),
+          ),
+          const SizedBox(height: 50),
           BlocConsumer<AddNoteCubit, AddNoteStates>(
             listener: (context, state) {
               if (state is FailureState) {
