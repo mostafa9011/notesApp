@@ -18,7 +18,7 @@ class CustomNoteItem extends StatelessWidget {
         padding: EdgeInsets.zero,
       ),
       onPressed: () {
-        Navigator.pushNamed(context, EditNoteView.id);
+        Navigator.pushNamed(context, EditNoteView.id, arguments: note);
       },
       child: Container(
         padding: const EdgeInsets.only(left: 16, top: 20, bottom: 24),
